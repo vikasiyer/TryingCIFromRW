@@ -34,6 +34,8 @@
     id json = [NSJSONSerialization JSONObjectWithData:sampleData options:kNilOptions error:&error];
     XCTAssertNotNil(json, @"invalid test data");
     _characterDetailJson = json;
+    
+    _testGuy = [[Character alloc] initWithCharacterDetailData:_characterDetailJson];
 }
 
 - (void)tearDown
